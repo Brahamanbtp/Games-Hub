@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <div class="score-board">
+        <div id="user-label" class="badge">USER</div>
+        <span id="user-score">0</span> : <span id="computer-score">0</span>
+        <div id="computer-label" class="badge">COMP</div>
+    </div>
+
+    <div class="result">
+        <p id="result-message">Make your move.</p>
+    </div>
+
+    <div class="choices">
+        <div id="rock" class="choice">
+            <img src="rock icons.png" alt="Rock">
+        </div>
+        <div id="paper" class="choice">
+            <img src="paper icon.png" alt="Paper">
+        </div>
+        <div id="scissors" class="choice">
+            <img src="scissors icon.png" alt="Scissors">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="leaderboard-btn">View Leaderboard</button>
+    </div>
+
+    <!-- Leaderboard section -->
+    <div id="leaderboard" class="leaderboard hidden">
+        <h2>Leaderboard</h2>
+        <p id="user-leaderboard">User: 0</p>
+        <p id="comp-leaderboard">Computer: 0</p>
+        <button id="close-leaderboard">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
