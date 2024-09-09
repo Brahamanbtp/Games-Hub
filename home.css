@@ -1,0 +1,17 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero-section {
+    background-image: url('background.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.game-card {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #343a40;
+}
