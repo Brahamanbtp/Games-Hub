@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Advanced Memory Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/d77ac583c4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1 class="heading">Memory Game</h1>
+    <p>Test your memory!</p>
+  </header>
+
+  <div class="score-panel">
+    <p class="score">Attempts: <span class="attempts-count">0</span></p>
+    <p class="score">Time: <span class="minutes">00</span>:<span class="seconds">00</span></p>
+    <button class="restart"><i class="fas fa-sync"></i> Restart</button>
+  </div>
+
+  <div class="grid" id="game"></div>
+
+  <audio id="flip-sound" src="assets/sounds/flip.wav"></audio>
+  <audio id="match-sound" src="assets/sounds/match.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

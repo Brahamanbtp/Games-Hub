@@ -1,0 +1,107 @@
+/* Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Score Panel */
+.score-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    background-color: rgba(0, 31, 63, 0.8);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+.score {
+    font-size: 1.2rem;
+}
+.restart {
+    background: #ffcc00;
+    color: #001f3f;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.restart:hover {
+    background: #ff9900;
+}
+
+/* Game Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    width: 750px;
+    max-width: 90%;
+}
+.card {
+    width: 100%;
+    height: 110px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.card.selected .card-inner {
+    transform: rotateY(180deg);
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.front {
+    background-color: #fab942;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("assets/images/question-mark.png");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+}
+.match .front {
+    background-color: #28a745;
+    cursor: not-allowed;
+}
